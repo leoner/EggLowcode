@@ -8,13 +8,11 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
-    "egg-proxy-npm": "^1.1.1",
     "egg-scripts": "^2.11.0",
     "egg-view-assets": "^1.8.0",
     "egg-view-nunjucks": "^2.3.0"
   },
   "devDependencies": {
-    "@alilc/lowcode-engine": "^1.0.10",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
     "cross-env": "^7.0.3",

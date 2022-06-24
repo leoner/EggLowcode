@@ -1,10 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-      <meta charset="UTF-8">
-    </head>
-  <body>
-  <div id="root" data-reactroot=""></div>
-  <script src="/umi.js"></script>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<title>Egg Lowcode Demo</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script>
+  window.publicPath = '{{ helper.assets.resourceBase }}';
+</script>
+{{ helper.assets.getScript('umi.js') | safe }}
+</body>
 </html>
