@@ -21,13 +21,21 @@
     "egg-mock": "^3.21.0",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0",
-    "umi": "^4.0.1"
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-components": "^1.1.3",
+    "@umijs/max": "^4.0.1",
+    "antd": "^4.20.7",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.1.2",
+    "prettier": "^2",
+    "prettier-plugin-organize-imports": "^2",
+    "prettier-plugin-packagejson": "^2"
   },
   "engines": {
     "node": ">=10.0.0"
   },
   "scripts": {
-    "build": "cross-env APP_ROOT=$PWD/app/view  umi build",
+    "build": "cross-env APP_ROOT=$PWD/app/view max build",
     "start": "egg-scripts start --daemon --title=egg-server-EggLowcode",
     "stop": "egg-scripts stop --title=egg-server-EggLowcode",
     "dev": "egg-bin dev",

@@ -27,31 +27,10 @@ module.exports = appInfo => {
       dir: path.join(appInfo.baseDir, 'app/public'),
     },
     view: {
-      root: path.join(appInfo.baseDir, 'app/view'),
+      root: path.join(appInfo.baseDir, 'app/public'),
       mapping: {
         '.html': 'nunjucks',
       },
-    },
-    assets: {
-      publicPath: '/public/',
-      devServer: {
-        debug: true,
-        command: 'max dev',
-        port: 8000,
-        env: {
-          USE_WEBPACK_5: 1,
-          UMI_ENV: 'dev',
-          REACT_APP_ENV: 'devumi',
-          APP_ROOT: path.join(__dirname, '../app/view'),
-          BROWSER: 'none',
-          ESLINT: 'none',
-          SOCKET_SERVER: 'http://127.0.0.1:8000',
-          PUBLIC_PATH: 'http://127.0.0.1:8000',
-        },
-      },
-    },
-    security: {
-      csrf: false,
     },
   };
 
