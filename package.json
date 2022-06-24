@@ -1,0 +1,54 @@
+{
+  "name": "EggLowcode",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-proxy-npm": "^1.1.1",
+    "egg-scripts": "^2.11.0",
+    "egg-view-assets": "^1.8.0",
+    "egg-view-nunjucks": "^2.3.0"
+  },
+  "devDependencies": {
+    "@alilc/lowcode-engine": "^1.0.10",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "cross-env": "^7.0.3",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "umi": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "cross-env APP_ROOT=$PWD/app/view  umi build",
+    "start": "egg-scripts start --daemon --title=egg-server-EggLowcode",
+    "stop": "egg-scripts stop --title=egg-server-EggLowcode",
+    "dev": "egg-bin dev",
+    "prod": "EGG_SERVER_ENV=prod egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "leoner",
+  "license": "MIT"
+}
