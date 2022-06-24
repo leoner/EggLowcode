@@ -27,23 +27,22 @@ module.exports = appInfo => {
       dir: path.join(appInfo.baseDir, 'app/public'),
     },
     view: {
-      root: [
-        path.join(appInfo.baseDir, 'app/view'),
-      ].join(','),
+      root: path.join(appInfo.baseDir, 'app/view'),
       mapping: {
-        '.nj': 'nunjucks',
-        '.js': 'assets',
+        '.html': 'nunjucks',
       },
-      defaultViewEngine: 'nunjucks',
     },
     assets: {
       publicPath: '/public/',
       devServer: {
         debug: true,
-        command: 'cross-env REACT_APP_ENV=dev MOCK=none APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 UMI_ENV=dev umi dev',
+        command: 'umi dev',
         port: 8000,
         env: {
-          APP_ROOT: path.join(__dirname, 'app/view'),
+          USE_WEBPACK_5: 1,
+          UMI_ENV: 'dev',
+          REACT_APP_ENV: 'devumi',
+          APP_ROOT: path.join(__dirname, '../app/web'),
           BROWSER: 'none',
           ESLINT: 'none',
           SOCKET_SERVER: 'http://127.0.0.1:8000',
