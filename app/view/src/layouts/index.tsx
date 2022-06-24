@@ -6,13 +6,10 @@ export default function Layout() {
     <div className={styles.navs}>
       <ul>
         <li>
-          <Link to="/">Home11</Link>
+          <Link to="/">编辑</Link>
         </li>
         <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/umijs/umi">Github</a>
+          <Link to="/preview">预览</Link>
         </li>
       </ul>
       <Outlet />
