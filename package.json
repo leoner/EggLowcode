@@ -1,0 +1,74 @@
+{
+  "name": "EggLowcode",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-proxy-npm": "^1.1.1",
+    "egg-scripts": "^2.11.0",
+    "egg-view-assets": "^1.8.0",
+    "egg-view-nunjucks": "^2.3.0"
+  },
+  "devDependencies": {
+    "@alilc/lowcode-datasource-fetch-handler": "^1.0.1",
+    "@alilc/lowcode-engine": "^1.0.10",
+    "@alilc/lowcode-plugin-code-editor": "^1.0.2",
+    "@alilc/lowcode-plugin-code-generator": "^1.0.4",
+    "@alilc/lowcode-plugin-components-pane": "^1.0.2",
+    "@alilc/lowcode-plugin-datasource-pane": "^1.0.5",
+    "@alilc/lowcode-plugin-inject": "^1.1.1",
+    "@alilc/lowcode-plugin-manual": "^1.0.3",
+    "@alilc/lowcode-plugin-schema": "^1.0.1",
+    "@alilc/lowcode-plugin-simulator-select": "^1.0.0",
+    "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
+    "@alilc/lowcode-plugin-zh-en": "^1.0.0",
+    "@alilc/lowcode-react-renderer": "^1.0.0",
+    "@alilc/lowcode-setter-behavior": "^1.0.0",
+    "@alilc/lowcode-setter-title": "^1.0.2",
+    "@umijs/plugin-sass": "^1.1.1",
+    "@umijs/yorkie": "^2.0.5",
+    "antd": "^4.20.7",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "cross-env": "^7.0.3",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.1",
+    "typescript": "^4.1.2",
+    "umi": "^3.5.26",
+    "umi-request": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "cross-env APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 umi build",
+    "start": "egg-scripts start --daemon --title=egg-server-EggLowcode",
+    "stop": "egg-scripts stop --title=egg-server-EggLowcode",
+    "dev": "egg-bin dev",
+    "prod": "EGG_SERVER_ENV=prod egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "leoner",
+  "license": "MIT"
+}
