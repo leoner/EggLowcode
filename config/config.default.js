@@ -36,12 +36,10 @@ module.exports = appInfo => {
       publicPath: '/public/',
       devServer: {
         debug: true,
-        command: 'umi dev',
+        command: 'cross-env REACT_APP_ENV=dev APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 umi dev',
         port: 8000,
         env: {
-          USE_WEBPACK_5: 1,
-          REACT_APP_ENV: 'devumi',
-          APP_ROOT: path.join(__dirname, '../app/view'),
+          APP_ROOT: path.join(__dirname, 'app/view'),
           BROWSER: 'none',
           ESLINT: 'none',
           SOCKET_SERVER: 'http://127.0.0.1:8000',

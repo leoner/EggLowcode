@@ -4,12 +4,21 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  outputPath: '../public',
   mfsu: {},
   mock: {},
   webpack5: {},
   routes: [
-    { path: '/preview', component: '@/pages/Preview' },
-    { path: '/lowcode', component: '@/pages/Lowcode' },
+    {
+      path: '/',
+      component: '@/layouts/index',
+      routes: [
+        { path: '/preview', component: '@/pages/Preview' },
+        { path: '/lowcode', component: '@/pages/Lowcode' },
+      ],
+    },
+
+
   ],
   styles: [
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/variables.css',
@@ -36,6 +45,7 @@ export default defineConfig({
   externals: {
     "react": "var window.React",
     "react-dom": "var window.ReactDOM",
+    "@alifd/next": "var window.Next",
     "prop-types": "var window.PropTypes",
     "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
     "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
@@ -46,5 +56,6 @@ export default defineConfig({
     "moment": "var window.moment",
     "lodash": "var window._"
   },
+  runtimePublicPath: true,
   fastRefresh: {},
 });

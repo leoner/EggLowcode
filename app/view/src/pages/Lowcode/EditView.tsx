@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { common, plugins, config } from '@alilc/lowcode-engine';
-import './global.scss';
+
 const preference = new Map();
 
 preference.set('DataSourcePane', {

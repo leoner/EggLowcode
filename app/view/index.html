@@ -32,6 +32,10 @@
   </head>
   <body>
   <div id="root"></div>
-  <script src="/umi.js"></script>
+  <script>
+    window.publicPath = '{{ helper.assets.resourceBase }}';
+  </script>
+  {{ helper.assets.getScript('umi.js') | safe }}
+  </body>
   
   </body></html>

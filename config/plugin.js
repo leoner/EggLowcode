@@ -14,9 +14,5 @@ module.exports = {
   assets: {
     enable: true,
     package: 'egg-view-assets',
-  },
-  proxyNpm: {
-    enable: true,
-    package: 'egg-proxy-npm',
-  },
+  }
 };
