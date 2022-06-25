@@ -24,9 +24,6 @@ import {
   getProjectSchemaFromLocalStorage,
 } from '@/services/lowcode';
 
-import assets from '@/mock/assets.json';
-import schema from '@/mock/schema.json';
-
 export default async function registerPlugins() {
   await plugins.register(Inject);
 
@@ -39,8 +36,8 @@ export default async function registerPlugins() {
       name: 'editor-init',
       async init() {
         // 修改面包屑组件的分隔符属性setter
-        // const assets = await request('/api/assets.json');
-        // const schema = await request('/api/schema.json');
+        const assets = await request('/api/assets.json');
+        const schema = await request('/api/schema.json');
         // 设置物料描述
         const { material, project } = ctx;
 

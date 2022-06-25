@@ -23,8 +23,8 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
     static: {
-      prefix: '/',
-      dir: path.join(appInfo.baseDir, 'app/public'),
+      prefix: '/api',
+      dir: [ path.join(appInfo.baseDir, 'app/public'), path.join(appInfo.baseDir, 'app/assets') ],
     },
     view: {
       root: path.join(appInfo.baseDir, 'app/view'),

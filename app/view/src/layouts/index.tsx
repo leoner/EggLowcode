@@ -15,6 +15,5 @@ export default function Layout({ children, location, route, history, match }: IR
       </ul>
       { children }
     </div>
-
   );
 }

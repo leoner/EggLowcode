@@ -4,6 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  publicPath: '/api/',
   outputPath: '../public',
   mfsu: {},
   mock: {},
@@ -17,8 +18,6 @@ export default defineConfig({
         { path: '/lowcode', component: '@/pages/Lowcode' },
       ],
     },
-
-
   ],
   styles: [
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/variables.css',

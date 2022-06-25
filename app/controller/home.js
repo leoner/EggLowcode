@@ -7,6 +7,16 @@ class HomeController extends Controller {
     const { ctx } = this;
     return ctx.render('index.html');
   }
+
+  async getSchema() {
+    const { ctx } = this;
+    return await ctx.services.lowcode.getSchema();
+  }
+
+  async saveSchema() {
+    const { ctx } = this;
+    return await ctx.services.lowcode.saveSchema();
+  }
 }
 
 module.exports = HomeController;
