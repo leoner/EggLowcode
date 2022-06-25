@@ -36,7 +36,7 @@ module.exports = appInfo => {
       publicPath: '/public/',
       devServer: {
         debug: true,
-        command: 'max dev',
+        command: 'umi dev',
         port: 8000,
         env: {
           USE_WEBPACK_5: 1,
