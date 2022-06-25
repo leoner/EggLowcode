@@ -1,29 +1,16 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  mock: {
-    include: ['src/mock/lowcode.ts'],
+  nodeModulesTransform: {
+    type: 'none',
   },
-  outputPath: '../public',
-  // runtimePublicPath: {},
+  mfsu: {},
+  mock: {},
+  webpack5: {},
   routes: [
-    {
-      path: '/',
-      redirect: '/lowcode',
-    },
-    {
-      name: '预览',
-      path: '/preview',
-      component: './Preview',
-    },
-    {
-      name: '低代码编辑',
-      path: '/lowcode',
-      component: './Lowcode',
-    },
-
+    { path: '/preview', component: '@/pages/Preview' },
+    { path: '/lowcode', component: '@/pages/Lowcode' },
   ],
-  npmClient: 'npm',
   styles: [
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/variables.css',
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/dist/next.var.min.css',
@@ -50,7 +37,6 @@ export default defineConfig({
     "react": "var window.React",
     "react-dom": "var window.ReactDOM",
     "prop-types": "var window.PropTypes",
-    "@alifd/next": "var window.Next",
     "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
     "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
     "@alilc/lowcode-editor-skeleton": "var window.AliLowCodeEngine.common.skeletonCabin",
@@ -60,5 +46,5 @@ export default defineConfig({
     "moment": "var window.moment",
     "lodash": "var window._"
   },
+  fastRefresh: {},
 });
-

@@ -40,7 +40,6 @@ module.exports = appInfo => {
         port: 8000,
         env: {
           USE_WEBPACK_5: 1,
-          UMI_ENV: 'dev',
           REACT_APP_ENV: 'devumi',
           APP_ROOT: path.join(__dirname, '../app/view'),
           BROWSER: 'none',

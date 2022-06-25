@@ -1,32 +1,38 @@
 {
   "private": true,
   "scripts": {
-    "dev": "umi dev",
+    "start": "umi dev",
     "build": "umi build",
-    "postinstall": "umi setup",
-    "start": "npm run dev"
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   },
   "dependencies": {
     "@alilc/lowcode-datasource-fetch-handler": "^1.0.1",
-    "@alilc/lowcode-engine": "^1.0.10",
-    "@alilc/lowcode-plugin-code-editor": "^1.0.2",
+    "@alilc/lowcode-designer": "^1.0.6",
+    "@alilc/lowcode-engine": "^1.0.5",
+    "@alilc/lowcode-plugin-code-editor": "^1.0.1",
+    "@alilc/lowcode-plugin-code-generator": "^1.0.3",
     "@alilc/lowcode-plugin-components-pane": "^1.0.3",
-    "@alilc/lowcode-plugin-datasource-pane": "^1.0.5",
-    "@alilc/lowcode-plugin-inject": "^1.1.1",
-    "@alilc/lowcode-plugin-manual": "^1.0.3",
-    "@alilc/lowcode-plugin-schema": "^1.0.1",
-    "@alilc/lowcode-react-renderer": "^1.0.10",
+    "@alilc/lowcode-plugin-datasource-pane": "^1.0.3",
+    "@alilc/lowcode-plugin-inject": "^1.0.0",
+    "@alilc/lowcode-plugin-schema": "^1.0.0",
+    "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
+    "@alilc/lowcode-react-renderer": "^1.0.6",
     "@alilc/lowcode-setter-behavior": "^1.0.0",
     "@alilc/lowcode-setter-title": "^1.0.2",
-    "@umijs/babel-preset-umi": "^4.0.2",
+    "@alilc/lowcode-utils": "^1.0.5",
     "@umijs/plugin-sass": "^1.1.1",
-    "antd": "^4.20.7",
-    "umi": "^4.0.2",
+    "@umijs/yorkie": "^2.0.5",
+    "antd": "^4.19.5",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.1",
+    "typescript": "^4.1.2",
+    "umi": "^3.5.26",
     "umi-request": "^1.4.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "typescript": "^4.1.2"
   }
 }

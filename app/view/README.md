@@ -1,3 +1,15 @@
-# README
+# umi project
 
-[AliLowcodeEngine](https://lowcode-engine.cn/) [Umi](https://umijs.org/) 结合一起的例子。
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```
