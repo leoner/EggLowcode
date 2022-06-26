@@ -6,12 +6,12 @@ body {
   }
 }
 
-body, .lc-workbench, .lowcode-plugin-sample-preview-content {
+body, .lc-workbench{
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 40px;
+  top: 50px;
   box-sizing: border-box;
   padding: 0;
   margin: 0;

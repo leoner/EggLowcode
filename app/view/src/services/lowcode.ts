@@ -1,4 +1,4 @@
-import request from 'umi-request';
+import { request } from '@umijs/max';
 import { material, project } from '@alilc/lowcode-engine';
 import { message } from 'antd';
 import { filterPackages } from '@alilc/lowcode-plugin-inject'
@@ -99,5 +99,5 @@ export const getPageSchema = async (scenarioName: string = 'index') => {
     return pageSchema;
   }
 
-  return await request('/api/schema.json');
+  return await request('./schema.json');
 };

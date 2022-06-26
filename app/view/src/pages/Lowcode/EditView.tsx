@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { common, plugins, config } from '@alilc/lowcode-engine';
-
+import { common, plugins } from '@alilc/lowcode-engine';
+import './global.scss';
 const preference = new Map();
 
 preference.set('DataSourcePane', {
@@ -28,9 +28,9 @@ const EditView: React.FC = () => {
   const [hasPluginInited, setHasPluginInited] = useState(false);
 
   return (
-    <div>
+    <>
       { hasPluginInited && <Workbench />}
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { PageContainer } from '@ant-design/pro-components';
 
 import { config } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
@@ -39,9 +40,9 @@ const LowcodePage: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <PageContainer ghost>
       { inited && <EditView/>}
-    </div>
+    </PageContainer>
   );
 };
 

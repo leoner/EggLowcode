@@ -8,11 +8,11 @@ import schemas from './schema.json';
 import info from './info.json';
 
 export default {
-  'GET /api/assets.json': (req: any, res: any) => {
+  'GET /assets.json': (req: any, res: any) => {
     res.json(assets);
   },
 
-  'GET /api/schema.json': (req: any, res: any) => {
+  'GET /schemas.json': (req: any, res: any) => {
     res.json(schemas);
   },
 
