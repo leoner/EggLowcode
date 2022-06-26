@@ -4,7 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  publicPath: '/api/',
+  publicPath: '/',
   outputPath: '../public',
   mfsu: {},
   mock: {},
