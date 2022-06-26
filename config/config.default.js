@@ -33,7 +33,7 @@ module.exports = appInfo => {
       },
     },
     assets: {
-      publicPath: '/public/',
+      publicPath: '/',
       devServer: {
         debug: true,
         command: 'cross-env REACT_APP_ENV=dev APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 umi dev',
