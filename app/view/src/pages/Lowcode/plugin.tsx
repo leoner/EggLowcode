@@ -10,7 +10,7 @@ import DataSourcePanePlugin from '@alilc/lowcode-plugin-datasource-pane';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
 import CodeEditor from "@alilc/lowcode-plugin-code-editor";
 import Inject, { injectAssets } from '@alilc/lowcode-plugin-inject';
-import request from 'umi-request';
+import { request } from '@umijs/max';
 
 // 注册到引擎
 import TitleSetter from '@alilc/lowcode-setter-title';
@@ -36,8 +36,8 @@ export default async function registerPlugins() {
       name: 'editor-init',
       async init() {
         // 修改面包屑组件的分隔符属性setter
-        const assets = await request('/api/assets.json');
-        const schema = await request('/api/schema.json');
+        const assets = await request('/assets.json');
+        const schema = await request('/schema.json');
         // 设置物料描述
         const { material, project } = ctx;
 

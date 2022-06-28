@@ -29,6 +29,9 @@
     "@alilc/lowcode-react-renderer": "^1.0.0",
     "@alilc/lowcode-setter-behavior": "^1.0.0",
     "@alilc/lowcode-setter-title": "^1.0.2",
+    "@ant-design/pro-components": "^1.1.6",
+    "@umijs/babel-preset-umi": "^4.0.2",
+    "@umijs/max": "^4.0.2",
     "@umijs/plugin-sass": "^1.1.1",
     "@umijs/yorkie": "^2.0.5",
     "antd": "^4.20.7",
@@ -42,15 +45,15 @@
     "node-sass": "^7.0.1",
     "sass-loader": "^13.0.1",
     "typescript": "^4.1.2",
-    "umi": "^3.5.26",
     "umi-request": "^1.4.0"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "scripts": {
-    "build": "cross-env APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 umi build",
+    "build": "cross-env APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 max build",
     "start": "egg-scripts start --daemon --title=egg-server-EggLowcode",
+    "start:prod": "EGG_SERVER_ENV=prod egg-scripts start --daemon --title=egg-server-EggLowcode",
     "stop": "egg-scripts stop --title=egg-server-EggLowcode",
     "dev": "egg-bin dev",
     "prod": "EGG_SERVER_ENV=prod egg-bin dev",

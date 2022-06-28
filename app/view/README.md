@@ -1,15 +1,3 @@
-# umi project
+# README
 
-## Getting Started
-
-Install dependencies,
-
-```bash
-$ yarn
-```
-
-Start the dev server,
-
-```bash
-$ yarn start
-```
+[AliLowcodeEngine](https://lowcode-engine.cn/) [Umi](https://umijs.org/) [AntdPro](http://procomponents.ant.design) 结合一起的例子。

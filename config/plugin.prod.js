@@ -14,5 +14,5 @@ module.exports = {
   assets: {
     enable: false,
     package: 'egg-view-assets',
-  }
+  },
 };

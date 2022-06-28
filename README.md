@@ -1,7 +1,5 @@
 # EggLowcode
 
-
-
 ## QuickStart
 
 <!-- add docs here for user -->
@@ -19,9 +17,15 @@ $ open http://localhost:7001/
 ### Deploy
 
 ```bash
-$ npm start
-$ npm stop
+$ npm run build
+$ npm run start:prod
+$ npm run stop:prod
 ```
+
+
+### TODO:
+1. 多页面的支持
+2. 数据库的支持
 
 ### npm scripts
 

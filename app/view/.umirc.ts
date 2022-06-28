@@ -1,24 +1,33 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  nodeModulesTransform: {
-    type: 'none',
-  },
-  publicPath: '/',
+  antd: {},
+  access: {},
+  model: {},
+  initialState: {},
+  runtimePublicPath: {},
   outputPath: '../public',
-  mfsu: {},
-  mock: {},
-  webpack5: {},
+  request: {},
+  layout: {
+    title: 'AntdProLowCode',
+  },
   routes: [
     {
       path: '/',
-      component: '@/layouts/index',
-      routes: [
-        { path: '/preview', component: '@/pages/Preview' },
-        { path: '/lowcode', component: '@/pages/Lowcode' },
-      ],
+      redirect: '/lowcode',
+    },
+    {
+      name: '低代码编辑',
+      path: '/lowcode',
+      component: './Lowcode',
+    },
+    {
+      name: '预览',
+      path: '/preview',
+      component: './Preview',
     },
   ],
+  npmClient: 'npm',
   styles: [
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/variables.css',
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/dist/next.var.min.css',
@@ -44,7 +53,6 @@ export default defineConfig({
   externals: {
     "react": "var window.React",
     "react-dom": "var window.ReactDOM",
-    "@alifd/next": "var window.Next",
     "prop-types": "var window.PropTypes",
     "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
     "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
@@ -55,6 +63,5 @@ export default defineConfig({
     "moment": "var window.moment",
     "lodash": "var window._"
   },
-  runtimePublicPath: true,
-  fastRefresh: {},
 });
+

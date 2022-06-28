@@ -23,7 +23,7 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
     static: {
-      prefix: '/api',
+      prefix: '/',
       dir: [ path.join(appInfo.baseDir, 'app/public'), path.join(appInfo.baseDir, 'app/assets') ],
     },
     view: {
@@ -36,7 +36,7 @@ module.exports = appInfo => {
       publicPath: '/',
       devServer: {
         debug: true,
-        command: 'cross-env REACT_APP_ENV=dev APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 umi dev',
+        command: 'cross-env REACT_APP_ENV=dev APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 max dev',
         port: 8000,
         env: {
           APP_ROOT: path.join(__dirname, 'app/view'),

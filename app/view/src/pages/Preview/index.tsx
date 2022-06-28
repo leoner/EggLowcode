@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { PageContainer } from '@ant-design/pro-components';
 import { buildComponents, AssetLoader } from '@alilc/lowcode-utils';
 import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
@@ -43,14 +44,14 @@ export default () => {
   }, []);
 
   return (
-    <>
+    <PageContainer title="">
       { data?.schema && (<ReactRenderer
         className="lowcode-plugin-sample-preview-content"
         schema={data.schema}
         components={data.components}
       />)
       }
-    </>
+    </PageContainer>
   );
 };
 

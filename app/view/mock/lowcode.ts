@@ -3,16 +3,16 @@ const users = [
   { name: 'Fish', nickName: 'B', gender: 'FEMALE' },
 ];
 
-import assets from './assets.json';
-import schemas from './schema.json';
-import info from './info.json';
+import assets from '../public/assets.json';
+import schemas from '../public/schema.json';
+import info from '../public/info.json';
 
 export default {
-  'GET /api/assets.json': (req: any, res: any) => {
+  'GET /assets.json': (req: any, res: any) => {
     res.json(assets);
   },
 
-  'GET /api/schema.json': (req: any, res: any) => {
+  'GET /schemas.json': (req: any, res: any) => {
     res.json(schemas);
   },
 
