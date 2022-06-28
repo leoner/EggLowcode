@@ -6,6 +6,7 @@ export default defineConfig({
   model: {},
   initialState: {},
   runtimePublicPath: {},
+  outputPath: '../public',
   request: {},
   layout: {
     title: 'AntdProLowCode',
