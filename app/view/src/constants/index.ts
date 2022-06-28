@@ -1,1 +1,1 @@
-export const DEFAULT_NAME = 'Umi Max';
+export const DEFAULT_NAME = 'Hello Egg Pro Umi Lowcode ';

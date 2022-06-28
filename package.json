@@ -53,6 +53,7 @@
   "scripts": {
     "build": "cross-env APP_ROOT=$PWD/app/view USE_WEBPACK_5=1 max build",
     "start": "egg-scripts start --daemon --title=egg-server-EggLowcode",
+    "start:prod": "EGG_SERVER_ENV=prod egg-scripts start --daemon --title=egg-server-EggLowcode",
     "stop": "egg-scripts stop --title=egg-server-EggLowcode",
     "dev": "egg-bin dev",
     "prod": "EGG_SERVER_ENV=prod egg-bin dev",

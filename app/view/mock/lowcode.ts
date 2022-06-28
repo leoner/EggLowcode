@@ -3,9 +3,9 @@ const users = [
   { name: 'Fish', nickName: 'B', gender: 'FEMALE' },
 ];
 
-import assets from './assets.json';
-import schemas from './schema.json';
-import info from './info.json';
+import assets from '../public/assets.json';
+import schemas from '../public/schema.json';
+import info from '../public/info.json';
 
 export default {
   'GET /assets.json': (req: any, res: any) => {
